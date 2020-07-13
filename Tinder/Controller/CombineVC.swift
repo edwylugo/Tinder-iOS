@@ -111,6 +111,9 @@ extension CombineVC {
     func verificarMatch(usuario: Usuario) {
         if usuario.match {
             print("Woow")
+            let matchVC = MatchVC()
+            matchVC.modalPresentationStyle = .fullScreen
+            self.present(matchVC, animated: true, completion: nil)
         }
     }
     
