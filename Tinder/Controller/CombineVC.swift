@@ -32,15 +32,25 @@ class CombineVC: UIViewController {
         view.backgroundColor = UIColor.systemGroupedBackground
         self.adicionarHeader()
         self.adicionarFooter()
-        //self.buscaUsuarios()
+        self.buscaUsuarios()
         
         let loading = Loading(frame: view.frame)
         view.insertSubview(loading, at: 0)
     }
     
     func buscaUsuarios() {
-        self.usuarios = UsuarioService.shared.buscaUsuarios()
-        self.adicionarCards()
+//        self.usuarios = UsuarioService.shared.buscaUsuarios()
+//        self.adicionarCards()
+        
+        UsuarioService.shared.buscaUsuarios { (usuarios, err) in
+            if let usuarios = usuarios {
+                DispatchQueue.main.async {
+                    self.usuarios = usuarios
+                    self.adicionarCards()
+                }
+            }
+        }
+        
     }
 }
 
