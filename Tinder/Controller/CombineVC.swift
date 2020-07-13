@@ -83,6 +83,10 @@ extension CombineVC {
     
     func removerCard(card: UIView) {
         card.removeFromSuperview()
+        self.usuarios = self.usuarios.filter({ (usuario) -> Bool in
+            return usuario.id != card.tag
+            
+        })
     }
     
 }
@@ -113,11 +117,13 @@ extension CombineVC {
                 //like
                 if card.center.x > self.view.bounds.width + 50 {
                     self.animarCard(rotationAngle: rotationAngle, acao: .like)
+                    return
                 }
                       
                 //deslike
                 if card.center.x < -50 {
                     self.animarCard(rotationAngle: rotationAngle, acao: .deslike)
+                    return
                 }
                 
                 UIView.animate(withDuration: 0.2) {
@@ -137,7 +143,27 @@ extension CombineVC {
             for view in self.view.subviews {
                 if view.tag == usuario.id {
                     if let card = view as? CombineCardView {
-                        print(card)
+                        let center: CGPoint
+                        
+                        switch acao {
+                        case .deslike:
+                            center = CGPoint(x: card.center.x - self.view.bounds.width, y: card.center.y + 50)
+                        case .like:
+                            center = CGPoint(x: card.center.x + self.view.bounds.width, y: card.center.y + 50)
+                        }
+                        
+//                        UIView.animate(withDuration: 0.2) {
+//                            card.center = center
+//                            card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+//                        }
+                        
+                        UIView.animate(withDuration: 0.2, animations: {
+                        card.center = center
+                        card.transform = CGAffineTransform(rotationAngle: rotationAngle)
+                        }) {(_) in
+                            self.removerCard(card: card)
+                        }
+                        
                     }
                 }
             }
