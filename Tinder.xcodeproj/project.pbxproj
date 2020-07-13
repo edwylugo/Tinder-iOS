@@ -20,6 +20,7 @@
 		599EEA6324BCB61A0021B8BC /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6224BCB6190021B8BC /* UILabel.swift */; };
 		599EEA6624BCBC1D0021B8BC /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6524BCBC1D0021B8BC /* Usuario.swift */; };
 		599EEA6924BCBCB60021B8BC /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6824BCBCB60021B8BC /* UsuarioService.swift */; };
+		599EEA6B24BCD6430021B8BC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6A24BCD6430021B8BC /* UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		599EEA6224BCB6190021B8BC /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		599EEA6524BCBC1D0021B8BC /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		599EEA6824BCBCB60021B8BC /* UsuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
+		599EEA6A24BCD6430021B8BC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				599EEA6024BBCFDB0021B8BC /* UIView.swift */,
 				599EEA6224BCB6190021B8BC /* UILabel.swift */,
+				599EEA6A24BCD6430021B8BC /* UIImageView.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				599EEA5E24BBCEDD0021B8BC /* CombineCardView.swift in Sources */,
 				599EEA6124BBCFDB0021B8BC /* UIView.swift in Sources */,
 				599EEA4324BBC5AE0021B8BC /* AppDelegate.swift in Sources */,
+				599EEA6B24BCD6430021B8BC /* UIImageView.swift in Sources */,
 				599EEA6624BCBC1D0021B8BC /* Usuario.swift in Sources */,
 				599EEA4524BBC5AE0021B8BC /* SceneDelegate.swift in Sources */,
 				599EEA6324BCB61A0021B8BC /* UILabel.swift in Sources */,
