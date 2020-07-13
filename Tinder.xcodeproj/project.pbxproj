@@ -22,6 +22,7 @@
 		599EEA6924BCBCB60021B8BC /* UsuarioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6824BCBCB60021B8BC /* UsuarioService.swift */; };
 		599EEA6B24BCD6430021B8BC /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6A24BCD6430021B8BC /* UIImageView.swift */; };
 		599EEA6D24BCDA7E0021B8BC /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6C24BCDA7E0021B8BC /* UIButton.swift */; };
+		599EEA6F24BCEE7A0021B8BC /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA6E24BCEE7A0021B8BC /* Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		599EEA6824BCBCB60021B8BC /* UsuarioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioService.swift; sourceTree = "<group>"; };
 		599EEA6A24BCD6430021B8BC /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		599EEA6C24BCDA7E0021B8BC /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		599EEA6E24BCEE7A0021B8BC /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				599EEA5D24BBCEDD0021B8BC /* CombineCardView.swift */,
+				599EEA6E24BCEE7A0021B8BC /* Loading.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			files = (
 				599EEA4724BBC5AE0021B8BC /* ViewController.swift in Sources */,
 				599EEA4D24BBC5AE0021B8BC /* Tinder.xcdatamodeld in Sources */,
+				599EEA6F24BCEE7A0021B8BC /* Loading.swift in Sources */,
 				599EEA6924BCBCB60021B8BC /* UsuarioService.swift in Sources */,
 				599EEA5E24BBCEDD0021B8BC /* CombineCardView.swift in Sources */,
 				599EEA6124BBCFDB0021B8BC /* UIView.swift in Sources */,
