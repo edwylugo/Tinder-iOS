@@ -95,6 +95,12 @@ extension CombineVC {
         })
     }
     
+    func verificarMatch(usuario: Usuario) {
+        if usuario.match {
+            print("Woow")
+        }
+    }
+    
 }
 
 extension CombineVC {
@@ -186,6 +192,11 @@ extension CombineVC {
                             card.deslikeImageView.alpha = like == false ? 1 : 0
                             card.likeImageView.alpha = like == true ? 1 : 0
                         }) {(_) in
+                            
+                            if like {
+                                self.verificarMatch(usuario: usuario)
+                            }
+                            
                             self.removerCard(card: card)
                         }
                         
