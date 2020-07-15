@@ -28,5 +28,5 @@ CombineCardView, Like and notLike, viewLike, viewNotLike, UINavigationController
 4. Open Xcode, click on 'Open ... and select the Tinder project.
 5. Run the app. Click 'Run'.
 
-### ScreenShots ###
+### Screen shots ###
 ![Clone](Tinder/Assets.xcassets/tinderBanner.jpg)
