@@ -9,7 +9,14 @@
 import UIKit
 
 class MatchVC: UIViewController {
-    
+    var usuario: Usuario? {
+        didSet {
+            if let usuario = usuario {
+                fotoImageView.image = UIImage(named: usuario.foto)
+                mensagemLabel.text = "\(usuario.nome) curtiu você também!"
+            }
+        }
+    }
     let fotoImageView: UIImageView = .fotoImageView(named: "pessoa-1")
     let likeImageView: UIImageView = .fotoImageView(named: "icone-like")
     let mensagemLabel: UILabel = .textBoldLabel(18, textColor: .white, numberOfLines: 1)
@@ -56,8 +63,17 @@ class MatchVC: UIViewController {
         view.addSubview(fotoImageView)
         fotoImageView.preencherSuperview()
         
-        mensagemLabel.text = "Ana curtiu você também!"
+        let gradient = CAGradientLayer()
+        gradient.frame = view.frame
+        gradient.colors = [UIColor.clear.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor]
+        
+        fotoImageView.layer.addSublayer(gradient)
+        
+        //mensagemLabel.text = "Ana curtiu você também!"
         mensagemLabel.textAlignment = .center
+        
+        voltarButton.addTarget(self, action: #selector(voltarClique), for: .touchUpInside)
+        
         likeImageView.translatesAutoresizingMaskIntoConstraints = false
         likeImageView.heightAnchor.constraint(equalToConstant: 44).isActive = true
         likeImageView.contentMode = .scaleAspectFit
@@ -71,5 +87,9 @@ class MatchVC: UIViewController {
         
         view.addSubview(stackView)
         stackView.preencher(top: nil, leading: view.leadingAnchor, trailing: view.trailingAnchor, bottom: view.bottomAnchor, padding: .init(top: 0, left: 32, bottom: 46, right: 32))
+    }
+    
+    @objc func voltarClique() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
