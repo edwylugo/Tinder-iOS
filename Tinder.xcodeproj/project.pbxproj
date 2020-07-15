@@ -10,6 +10,8 @@
 		59988AF924BF7BE1008EF33B /* DetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AF824BF7BE1008EF33B /* DetalheVC.swift */; };
 		59988AFB24BF8070008EF33B /* DetalheHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */; };
 		59988AFD24BF8BAF008EF33B /* DetalhePerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AFC24BF8BAF008EF33B /* DetalhePerfilCell.swift */; };
+		59988AFF24BF9AFD008EF33B /* DetalheFotosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AFE24BF9AFD008EF33B /* DetalheFotosCell.swift */; };
+		59988B0124BFA147008EF33B /* SlideFotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988B0024BFA147008EF33B /* SlideFotosVC.swift */; };
 		599EEA4324BBC5AE0021B8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4224BBC5AE0021B8BC /* AppDelegate.swift */; };
 		599EEA4524BBC5AE0021B8BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4424BBC5AE0021B8BC /* SceneDelegate.swift */; };
 		599EEA4724BBC5AE0021B8BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4624BBC5AE0021B8BC /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		59988AF824BF7BE1008EF33B /* DetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVC.swift; sourceTree = "<group>"; };
 		59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheHeaderView.swift; sourceTree = "<group>"; };
 		59988AFC24BF8BAF008EF33B /* DetalhePerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhePerfilCell.swift; sourceTree = "<group>"; };
+		59988AFE24BF9AFD008EF33B /* DetalheFotosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheFotosCell.swift; sourceTree = "<group>"; };
+		59988B0024BFA147008EF33B /* SlideFotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideFotosVC.swift; sourceTree = "<group>"; };
 		599EEA3F24BBC5AE0021B8BC /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		599EEA4224BBC5AE0021B8BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		599EEA4424BBC5AE0021B8BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				599EEA5A24BBC6170021B8BC /* CombineVC.swift */,
 				599EEA7024BD1BE20021B8BC /* MatchVC.swift */,
 				59988AF824BF7BE1008EF33B /* DetalheVC.swift */,
+				59988B0024BFA147008EF33B /* SlideFotosVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 		599EEA5C24BBCECE0021B8BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				59988AFE24BF9AFD008EF33B /* DetalheFotosCell.swift */,
 				599EEA5D24BBCEDD0021B8BC /* CombineCardView.swift */,
 				599EEA6E24BCEE7A0021B8BC /* Loading.swift */,
 				59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */,
@@ -235,8 +241,10 @@
 				599EEA4524BBC5AE0021B8BC /* SceneDelegate.swift in Sources */,
 				599EEA6324BCB61A0021B8BC /* UILabel.swift in Sources */,
 				59988AFB24BF8070008EF33B /* DetalheHeaderView.swift in Sources */,
+				59988B0124BFA147008EF33B /* SlideFotosVC.swift in Sources */,
 				599EEA5B24BBC6170021B8BC /* CombineVC.swift in Sources */,
 				599EEA6D24BCDA7E0021B8BC /* UIButton.swift in Sources */,
+				59988AFF24BF9AFD008EF33B /* DetalheFotosCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
