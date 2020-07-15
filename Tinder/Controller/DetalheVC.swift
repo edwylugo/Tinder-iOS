@@ -60,7 +60,7 @@ class DetalheVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         super.viewDidLoad()
         
         collectionView.contentInsetAdjustmentBehavior = .never
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId )
         collectionView.register(DetalheHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
         collectionView.register(DetalhePerfilCell.self, forCellWithReuseIdentifier: perfilId )
