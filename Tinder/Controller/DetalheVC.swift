@@ -48,6 +48,11 @@ class DetalheVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     
     var deslikeButton: UIButton = .iconFooter(named: "icone-deslike")
     var likeButton: UIButton = .iconFooter(named: "icone-like")
+    var voltarButton: UIButton = {
+       let button = UIButton()
+        button.setImage(UIImage(named: "icone-down"), for: .normal)
+        return button
+    }()
     
     var callback: ((Usuario?, Acao) -> Void)?
     
