@@ -35,8 +35,15 @@ class UsuarioService {
     Usuario(id: 120, nome: "Maria Virginia", idade: 18, match: false, frase: "Adoro balada", foto: "pessoa-20")
   ]
   
-  func buscaUsuarios () -> [Usuario] {
-    return self.usuarios
-  }
+//  func buscaUsuarios () -> [Usuario] {
+//    return self.usuarios
+//  }
+    
+    func buscaUsuarios(completion: @escaping ([Usuario]?, Error?) -> ()){
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        completion(self.usuarios, nil)
+        }
+    }
 }
 

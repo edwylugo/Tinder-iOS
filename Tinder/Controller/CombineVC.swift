@@ -32,15 +32,25 @@ class CombineVC: UIViewController {
         view.backgroundColor = UIColor.systemGroupedBackground
         self.adicionarHeader()
         self.adicionarFooter()
-        //self.buscaUsuarios()
+        self.buscaUsuarios()
         
         let loading = Loading(frame: view.frame)
         view.insertSubview(loading, at: 0)
     }
     
     func buscaUsuarios() {
-        self.usuarios = UsuarioService.shared.buscaUsuarios()
-        self.adicionarCards()
+//        self.usuarios = UsuarioService.shared.buscaUsuarios()
+//        self.adicionarCards()
+        
+        UsuarioService.shared.buscaUsuarios { (usuarios, err) in
+            if let usuarios = usuarios {
+                DispatchQueue.main.async {
+                    self.usuarios = usuarios
+                    self.adicionarCards()
+                }
+            }
+        }
+        
     }
 }
 
@@ -80,6 +90,10 @@ extension CombineVC {
             
             card.usuario = usuario
             card.tag = usuario.id
+            
+            card.callback = { (data) in
+                self.visualizarDetalhe(usuario: data)
+            }
                 
                 let gesture = UIPanGestureRecognizer()
                 gesture.addTarget(self, action: #selector(handlerCard))
@@ -101,7 +115,28 @@ extension CombineVC {
     func verificarMatch(usuario: Usuario) {
         if usuario.match {
             print("Woow")
+            let matchVC = MatchVC()
+            matchVC.usuario = usuario
+            matchVC.modalPresentationStyle = .fullScreen
+            self.present(matchVC, animated: true, completion: nil)
         }
+    }
+    
+    func visualizarDetalhe(usuario: Usuario) {
+        let detalheVC = DetalheVC()
+        detalheVC.usuario = usuario
+        detalheVC.modalPresentationStyle = .fullScreen
+        detalheVC.callback = { (usuario, acao) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if acao == .deslike {
+                    self.deslikeClique()
+                } else {
+                    self.likeClique()
+                }
+            }
+            
+        }
+      self.present(detalheVC, animated: true, completion: nil)
     }
     
 }
