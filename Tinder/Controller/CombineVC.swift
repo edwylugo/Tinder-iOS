@@ -92,7 +92,7 @@ extension CombineVC {
             card.tag = usuario.id
             
             card.callback = { (data) in
-                self.verificarDetalhe(usuario: data)
+                self.visualizarDetalhe(usuario: data)
             }
                 
                 let gesture = UIPanGestureRecognizer()
@@ -122,10 +122,20 @@ extension CombineVC {
         }
     }
     
-    func verificarDetalhe(usuario: Usuario) {
+    func visualizarDetalhe(usuario: Usuario) {
         let detalheVC = DetalheVC()
         detalheVC.usuario = usuario
         detalheVC.modalPresentationStyle = .fullScreen
+        detalheVC.callback = { (usuario, acao) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                if acao == .deslike {
+                    self.deslikeClique()
+                } else {
+                    self.likeClique()
+                }
+            }
+            
+        }
       self.present(detalheVC, animated: true, completion: nil)
     }
     
