@@ -35,8 +35,15 @@ class HeaderLayout: UICollectionViewFlowLayout {
 
 class DetalheVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var usuario: Usuario? {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
+    
     let cellId = "cellId"
     let headerId = "headerId"
+    let perfilId = "perfilId"
     
     init() {
         super.init(collectionViewLayout: HeaderLayout())
@@ -53,14 +60,17 @@ class DetalheVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
         collectionView.backgroundColor = .red
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId )
         collectionView.register(DetalheHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+        collectionView.register(DetalhePerfilCell.self, forCellWithReuseIdentifier: perfilId )
+
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! DetalheHeaderView
+        header.usuario = self.usuario
         return header
     }
     
@@ -69,12 +79,27 @@ class DetalheVC: UICollectionViewController, UICollectionViewDelegateFlowLayout 
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .blue
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+//        cell.backgroundColor = .blue
+//        return cell
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: perfilId, for: indexPath) as! DetalhePerfilCell
+        cell.usuario = self.usuario
         return cell
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return .init(width: view.bounds.width, height: 100)
+        let width: CGFloat = UIScreen.main.bounds.width
+        var height: CGFloat = 100
+        
+        let cell = DetalhePerfilCell(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        cell.usuario = self.usuario
+        cell.layoutIfNeeded()
+        
+        let estimativaTamanho = cell.systemLayoutSizeFitting(CGSize(width: width, height: 1000))
+        height = estimativaTamanho.height
+        
+        return .init(width: width , height: height)
     }
 }

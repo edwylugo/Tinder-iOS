@@ -10,7 +10,15 @@ import UIKit
 
 class DetalheHeaderView: UICollectionReusableView {
     
-    var fotoImageView: UIImageView = .fotoImageView(named: "pessoa-1")
+    var usuario: Usuario? {
+           didSet {
+               if let usuario = usuario {
+                fotoImageView.image = UIImage(named: usuario.foto)
+               }
+           }
+       }
+    
+    var fotoImageView: UIImageView = .fotoImageView(named: "")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

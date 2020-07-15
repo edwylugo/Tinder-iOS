@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		59988AF924BF7BE1008EF33B /* DetalheVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AF824BF7BE1008EF33B /* DetalheVC.swift */; };
 		59988AFB24BF8070008EF33B /* DetalheHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */; };
+		59988AFD24BF8BAF008EF33B /* DetalhePerfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59988AFC24BF8BAF008EF33B /* DetalhePerfilCell.swift */; };
 		599EEA4324BBC5AE0021B8BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4224BBC5AE0021B8BC /* AppDelegate.swift */; };
 		599EEA4524BBC5AE0021B8BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4424BBC5AE0021B8BC /* SceneDelegate.swift */; };
 		599EEA4724BBC5AE0021B8BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599EEA4624BBC5AE0021B8BC /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		59988AF824BF7BE1008EF33B /* DetalheVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheVC.swift; sourceTree = "<group>"; };
 		59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheHeaderView.swift; sourceTree = "<group>"; };
+		59988AFC24BF8BAF008EF33B /* DetalhePerfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhePerfilCell.swift; sourceTree = "<group>"; };
 		599EEA3F24BBC5AE0021B8BC /* Tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		599EEA4224BBC5AE0021B8BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		599EEA4424BBC5AE0021B8BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				599EEA5D24BBCEDD0021B8BC /* CombineCardView.swift */,
 				599EEA6E24BCEE7A0021B8BC /* Loading.swift */,
 				59988AFA24BF8070008EF33B /* DetalheHeaderView.swift */,
+				59988AFC24BF8BAF008EF33B /* DetalhePerfilCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				599EEA4724BBC5AE0021B8BC /* ViewController.swift in Sources */,
 				599EEA4D24BBC5AE0021B8BC /* Tinder.xcdatamodeld in Sources */,
 				599EEA6F24BCEE7A0021B8BC /* Loading.swift in Sources */,
+				59988AFD24BF8BAF008EF33B /* DetalhePerfilCell.swift in Sources */,
 				599EEA6924BCBCB60021B8BC /* UsuarioService.swift in Sources */,
 				599EEA5E24BBCEDD0021B8BC /* CombineCardView.swift in Sources */,
 				599EEA6124BBCFDB0021B8BC /* UIView.swift in Sources */,
